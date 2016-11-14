@@ -1,4 +1,9 @@
 ---
+#For all profiles set port 8081
+server:
+  port: 8081
+
+---
 spring:
   cloud:
     config:
@@ -6,9 +11,12 @@ spring:
         git:
           uri: https://github.com/IldarS1995/spring-cloud-config-learning-app
           searchPaths: ConfigData
+
+---
+spring:
+  profiles: native
+  cloud:
+    config:
+      server:
         native:
           searchLocations: classpath:offline-repository/
-#  profiles:
-#    active: native
-server:
-  port: 8081
