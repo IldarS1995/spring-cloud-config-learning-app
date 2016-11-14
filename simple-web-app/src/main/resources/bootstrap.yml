@@ -1,0 +1,11 @@
+---
+server:
+  port: 8082
+spring:
+  profiles:
+    active: euro
+  application:
+    name: simple-web-app
+  cloud:
+    config:
+      uri: http://localhost:8081
