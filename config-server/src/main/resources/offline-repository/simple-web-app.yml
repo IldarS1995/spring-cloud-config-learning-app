@@ -1,0 +1,5 @@
+#Would only work when spring.profiles.active=native on the config server
+---
+currency:
+  name: swiss franc
+  rate: 1.0

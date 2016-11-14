@@ -8,5 +8,7 @@ spring:
           searchPaths: ConfigData
         native:
           searchLocations: classpath:offline-repository/
+#  profiles:
+#    active: native
 server:
   port: 8081

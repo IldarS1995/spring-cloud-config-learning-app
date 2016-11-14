@@ -14,14 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/currency_rate",
-        consumes = MediaType.APPLICATION_JSON_VALUE,
         produces = MediaType.APPLICATION_JSON_VALUE)
 public class CurrencyController {
 
     @Autowired
     private CurrencyService currencyService;
 
-    @RequestMapping(value = "/dollars/{count}", method = RequestMethod.GET)
+    @RequestMapping(value = "/dollars/{count:.+}", method = RequestMethod.GET)
     public ResponseEntity<ExchangeRate> countExchangeRate(@PathVariable Double count) {
         return ResponseEntity.ok(currencyService.calculateExchangeRate("dollar", count));
     }
